@@ -1,0 +1,10 @@
+^C:\USERS\HOME\DOCUMENTS\GITHUB\OOO\CLONECMAKE1\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Home/Documents/GitHub/ooo/CloneCMake1 -BC:/Users/Home/Documents/GitHub/ooo/NewRes1 --check-stamp-file C:/Users/Home/Documents/GitHub/ooo/NewRes1/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
